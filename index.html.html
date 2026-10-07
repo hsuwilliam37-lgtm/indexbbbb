@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人專業介紹 | 東海大學財務金融學系</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#131c2e',
+                        accentGold: '#d4af37',
+                        accentBlue: '#38bdf8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(19, 28, 46, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blue-gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* 自定義卷軸樣式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-darkBg">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-serif font-bold tracking-wider gold-gradient-text flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-amber-400"></i> Portfolio
+            </a>
+            
+            <!-- 桌面版導覽列 -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-amber-400 transition-colors">關於我</a>
+                <a href="#skills" class="hover:text-amber-400 transition-colors">專業技能</a>
+                <a href="#projects" class="hover:text-amber-400 transition-colors">專案與研究</a>
+                <a href="#interests" class="hover:text-amber-400 transition-colors">生活品味</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-darkBg font-semibold hover:opacity-95 transition shadow-lg shadow-amber-500/20">聯絡我</a>
+            </nav>
+
+            <!-- 手機版漢堡按鈕 -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-amber-400 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10 px-6 py-4 flex flex-col gap-4">
+            <a href="#about" class="mobile-link text-slate-300 hover:text-amber-400">關於我</a>
+            <a href="#skills" class="mobile-link text-slate-300 hover:text-amber-400">專業技能</a>
+            <a href="#projects" class="mobile-link text-slate-300 hover:text-amber-400">專案與研究</a>
+            <a href="#interests" class="mobile-link text-slate-300 hover:text-amber-400">生活品味</a>
+            <a href="#contact" class="mobile-link px-5 py-2 rounded-lg bg-amber-500 text-darkBg text-center font-semibold">聯絡我</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- 背景光暈效果 -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 z-10 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs md:text-sm text-amber-300 mb-6 border border-amber-500/30">
+                    <i class="fa-solid fa-graduation-cap"></i> 東海大學財務金融學系
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-tight">
+                    精準洞察市場，<br><span class="gold-gradient-text">賦能永續金融未來</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
+                    立足扎實的財金底蘊，專注於財務分析、企業評價與 ESG 永續發展趨勢。懷抱國際視野，積極朝台北金融業與全球市場邁進。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-darkBg font-semibold transition shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2">
+                        探索我的專案 <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-slate-800/80 text-slate-200 font-semibold transition border border-white/10 flex items-center justify-center gap-2">
+                        了解個人背景
+                    </a>
+                </div>
+            </div>
+
+            <!-- 右側整合上傳的個人照片 -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-sky-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    <div class="relative w-72 sm:w-80 h-96 rounded-3xl overflow-hidden glass-card p-2 border border-amber-500/30 shadow-2xl">
+                        <img src="image.png" alt="個人形象照片" class="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition duration-700" onerror="this.src='https://placehold.co/400x500/131c2e/d4af37?text=Portfolio+Photo'">
+                        <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-darkBg/80 backdrop-blur-md border border-white/10 flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-200">台北金融探索</div>
+                                <div class="text-[10px] text-slate-400">中正紀念堂留影</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 數據展示列 -->
+        <div class="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-6 pb-6 hidden md:block">
+            <div class="grid grid-cols-4 gap-6 pt-6 border-t border-white/10">
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-2xl font-bold font-serif text-amber-400 mb-0.5">東海大學</div>
+                    <div class="text-xs text-slate-400">財務金融學系學士修習</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-2xl font-bold font-serif text-sky-400 mb-0.5">ESG 永續</div>
+                    <div class="text-xs text-slate-400">綠色金融與企業評價研究</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-2xl font-bold font-serif text-amber-400 mb-0.5">精算與分析</div>
+                    <div class="text-xs text-slate-400">Excel財務模組與現金流</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <div class="text-2xl font-bold font-serif text-sky-400 mb-0.5">Global 願景</div>
+                    <div class="text-xs text-slate-400">放眼台北金融重鎮與國際</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 relative bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">關於我</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">結合金融專業與跨領域思維，培養嚴謹的邏輯推理與前瞻眼光。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- 左側個人形象卡片 -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-6 rounded-3xl relative overflow-hidden group">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition duration-500"></div>
+                        <div class="w-full h-72 rounded-2xl overflow-hidden mb-6 relative border border-white/10">
+                            <img src="image.png" alt="個人近照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x300/131c2e/d4af37?text=Personal+Image'">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">財務金融新星</h3>
+                        <p class="text-amber-400 text-sm font-medium mb-4">東海大學財金系學生 / 台北金融職涯發展中</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            我深信金融不只是數字的加減，更是資源配置與推動社會永續發展的核心引擎。在校期間深入鑽研財務報表分析、現金流量預測與現代投資組合理論。
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-slate-400">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-amber-400"></i> 台中 / 台北</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-language text-sky-400"></i> 華語 / 英語流利</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側特質細節 -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl transition hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-4">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">財金專業扎實</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            精通財務報表解讀、現金流量分析、企業價值評估與衍生性金融商品邏輯，具備企業財務體質診斷能力。
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl transition hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-4">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">ESG 與永續金融</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            關注全球綠色轉型浪費，研究企業 ESG 表現如何影響資本成本與長期投資價值，具備前瞻永續視野。
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl transition hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-4">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">國際化視野</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            持續精進商業英語能力與跨文化溝通，目標前進台北金融重鎮，並放眼國際資本市場與跨國企業財會管理。
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl transition hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-4">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">嚴謹邏輯與溝通</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            擅長將複雜繁瑣的財務數據，轉化為清晰易懂的視覺化簡報與決策建議，具備良好的團隊領導與協調能力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">專業技能與證照</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">具備現代金融分析師所需的數位工具、量化模型與語言能力。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 技能卡片 1 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-6">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">財務分析與模型</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Excel 進階財金模組建立</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 現金流量折現模型 (DCF)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 財務比率分析與體質診斷</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 企業評價與風險評估</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 text-xs text-amber-400 font-semibold tracking-wider uppercase">
+                        Quantitative Analysis
+                    </div>
+                </div>
+
+                <!-- 技能卡片 2 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-6">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">證照與語言</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> TOEIC 英語金色證照實力</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> 證券商業務員 / 投信投顧證照準備</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> 金融市場常識與職業道德</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Python 基礎數據分析應用</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 text-xs text-sky-400 font-semibold tracking-wider uppercase">
+                        Credentials & Languages
+                    </div>
+                </div>
+
+                <!-- 技能卡片 3 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-6">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">商業軟實力</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 商業簡報與 pitch 技巧</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 跨團隊專案協作與溝通</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 市場趨勢研究與報告撰寫</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 商業邏輯與問題解決能力</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 text-xs text-amber-400 font-semibold tracking-wider uppercase">
+                        Business Acumen
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增：如何自我介紹指南與話術架構區塊 -->
+    <section id="pitch-guide" class="py-24 relative bg-slate-900/40 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Professional Pitching</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">如何精準自我介紹？</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">針對金融業求職與面試，我歸納出 1 分鐘黃金自我介紹架構與實戰話術。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- 步驟 1 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-amber-500 text-darkBg font-bold flex items-center justify-center shadow-lg">1</div>
+                    <h3 class="text-xl font-bold mb-3 mt-2">破冰與定位 (Hook)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        開門見山點出自己的學校科系與核心價值，用一句話吸引主管目光，建立專業第一印象。
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950/60 text-xs text-amber-300 font-mono border border-amber-500/20">
+                        「您好，我是就讀東海財金的...，專注於財務分析與永續金融。」
+                    </div>
+                </div>
+
+                <!-- 步驟 2 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-sky-500 text-darkBg font-bold flex items-center justify-center shadow-lg">2</div>
+                    <h3 class="text-xl font-bold mb-3 mt-2">核心亮點佐證 (Proof)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        透過具體的專案成果、證照或工具應用（如 Excel 模組、DCF 模型、ESG 評估），證明實務作戰能力。
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950/60 text-xs text-sky-300 font-mono border border-sky-500/20">
+                        「在校期間我完成了上市企業評價模型，並深入研究 ESG 對資本成本的影響...」
+                    </div>
+                </div>
+
+                <!-- 步驟 3 -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-amber-500 text-darkBg font-bold flex items-center justify-center shadow-lg">3</div>
+                    <h3 class="text-xl font-bold mb-3 mt-2">未來願景連結 (Vision)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        表達對於前進台北金融重鎮的熱忱，並說明自己如何能為團隊創造即戰力與長遠價值的企圖心。
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950/60 text-xs text-amber-300 font-mono border border-amber-500/20">
+                        「期待能將這些專業結合國際視野，在台北金融市場貢獻所學...」
+                    </div>
+                </div>
+            </div>
+
+            <!-- 實戰完整話術範本 -->
+            <div class="glass-card p-8 md:p-10 rounded-3xl border border-amber-500/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">1 分鐘面試黃金自我介紹稿（範本）</h3>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                    「主管您好，我是畢業於東海大學財務金融學系的ＯＯＯ。我的核心優勢在於扎實的財務報表分析能力，以及結合前瞻趨勢的 ESG 永續金融研究。在校期間，我除了熟稔 Excel 財金模組建構與企業現金流量折現分析外，也積極培養商務英語與團隊協作能力。我一直很嚮往能投入台北金融業的快速步調，將理論轉化為企業的決策支援。非常感謝今天的面試機會，期待能在貴公司發揮所長，謝謝！」
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1.5 rounded-xl bg-amber-500/10 text-amber-400 text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-clock"></i> 控制在 60-90 秒內</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-sky-500/10 text-sky-400 text-xs font-semibold flex items-center gap-1.5"><i class="fa-solid fa-bullseye"></i> 突顯量化與永續亮點</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 relative bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">專業專案與研究</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">結合課堂理論與市場實務，精選財務分析與永續投資專案。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 專案 1 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition hover:border-amber-500/50">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold">企業評價模型</span>
+                            <span class="text-xs text-slate-400">東海財金專案</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">上市公司現金流量折現與評價分析</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            針對特定標的企業進行歷史財務報表解讀，建構完整的 3-statement 預測模型，並運用自由現金流量折現法 (DCF) 評估其內含價值與投資吸引力。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">Excel 模型</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">DCF Valuation</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">敏感度分析</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> 2025 - 2026</span>
+                        <span class="text-sm text-amber-400 font-medium flex items-center gap-1">深入研究 <i class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- 專案 2 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between transition hover:border-sky-500/50">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold">ESG 永續金融</span>
+                            <span class="text-xs text-slate-400">研究論文發表</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">ESG 表現對企業資本成本與市值的影響評估</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            探討台灣企業在永續轉型浪費中的財務回報，分析高 ESG 評級公司如何透過降低資金成本提升長期股東權益報酬率 (ROE)，提供前瞻的投資洞察。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">ESG 評級</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">綠色金融</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300">實證研究</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> 2025</span>
+                        <span class="text-sm text-sky-400 font-medium flex items-center gap-1">專案報告 <i class="fa-solid fa-arrow-right text-xs"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">生活品味與興趣</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">理性的財務分析之外，感性的藝文與建築美學滋養了更具溫度的商業視角。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 品味卡片 1 -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-amber-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-6">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">建築與空間美學</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        熱愛現代主義與極簡建築設計（如貝聿銘、安藤忠雄的作品）。欣賞結構與光影的完美交織，這也培養了我對細節的敏銳度與結構化思維。
+                    </p>
+                </div>
+
+                <!-- 品味卡片 2 -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-sky-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-6">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">經典電影與敘事</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        喜歡探討人性、博弈與時代巨輪的經典電影（如《華爾街》、《大賣空》）。從中體察市場心理學與決策背後的深刻洞見。
+                    </p>
+                </div>
+
+                <!-- 品味卡片 3 -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-amber-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-6">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">人文哲學與閱讀</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        廣泛涉獵經濟歷史、人文傳記與商業思維書籍。堅信「讀萬卷書」能擴闊格局，在快速變動的金融世界中保持內心的定錨與前瞻眼光。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 relative bg-slate-950/80 border-t border-white/10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">聯絡我</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-400">誠摯期待與台北金融界前輩、企業先進交流，或尋求實習與職涯發展機會。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- 聯絡資訊 -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">電子信箱</div>
+                            <div class="text-sm font-semibold text-slate-200">contact@example.com</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">聯絡電話</div>
+                            <div class="text-sm font-semibold text-slate-200">+886 (0)912-345-678</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl shrink-0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">LinkedIn 專業社群</div>
+                            <div class="text-sm font-semibold text-slate-200">linkedin.com/in/finance-profile</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 聯絡表單 -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleFormSubmit(event)" class="glass-card p-8 rounded-3xl space-y-6">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-2">您的姓名 / 稱謂</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-slate-100 focus:outline-none focus:border-amber-500 transition text-sm" placeholder="例如：林經理 / 宏達投資">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-2">電子信箱</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-slate-100 focus:outline-none focus:border-amber-500 transition text-sm" placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-2">訊息內容</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-slate-100 focus:outline-none focus:border-amber-500 transition text-sm" placeholder="請輸入您想交流的內容、實習機會或合作邀約..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-darkBg font-semibold transition shadow-lg shadow-amber-500/20 text-sm flex items-center justify-center gap-2">
+                            送出訊息 <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="success-msg" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center text-sm">
+                        <i class="fa-solid fa-circle-check mr-2"></i> 感謝您的填寫！訊息已成功送出，我將盡快與您聯繫。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="py-8 bg-darkBorder text-center text-xs text-slate-500 border-t border-white/5">
+        <p>&copy; 2026 Personal Portfolio. All Rights Reserved. Designed for Finance Professionals.</p>
+    </footer>
+
+    <script>
+        // 手機版選單切換
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 導覽列滾動陰影效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-xl', 'bg-darkBg/90');
+            } else {
+                navbar.classList.remove('shadow-xl', 'bg-darkBg/90');
+            }
+        });
+
+        // 聯絡表單送出模擬
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('success-msg');
+            successMsg.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
